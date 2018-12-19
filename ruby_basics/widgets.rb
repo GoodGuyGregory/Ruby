@@ -21,7 +21,7 @@ def price(quantity)
 	if quantity >= 100 
 		price_per_item = 8
 	
-	elsif	quantity >= 50
+	elsif quantity >= 50
 		price_per_item = 9
 	
 	else quantity < 50
