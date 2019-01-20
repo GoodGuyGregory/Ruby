@@ -2,9 +2,19 @@
 # classes have capital letter
 
 class Name
+  #initialize method allows programmers to assign variables to objects
+  # appear as arguments for the object
+ def initialize(title, first_name, middle_name, last_name)
+   #creates no argument constructors with initialize method
+   # creates instance variables for when the class is initialized
+   @title = title
+   @first_name = first_name
+   @middle_name = middle_name
+   @last_name = last_name
+ end
   #adds attributes for the class
   def title
-    "Mr."
+    @title
   end
 
   def first_name
@@ -21,13 +31,13 @@ class Name
 end
 
 #istantiate the class
-name = Name.new
+name = Name.new("Mr." ,"Greg" ,"" ,"Witt")
 # like in Java it will return the memory address of the class..
 puts "Memory Location for the name:"
 puts name
 puts "===================="
 #lets display class attributes
-puts name.title
-puts name.first_name
-puts name.middle_name
-puts name.last_name
+puts name.title + " " +
+     name.first_name + " " +
+     name.middle_name + " " +
+     name.last_name
