@@ -6,7 +6,7 @@ class Name
   # appear as arguments for the object
   #Ruby writes the methods and gives the compiler the setters
   # and getters or returns the variables for the class
-  attr_reader :title, :first_name, :middle_name, :last_name
+  attr_reader :title, :first_name, :middle_name, :last_name :first_and_middle_name
   # accessor vs writer vs reader.... Be cautious and utilize those
   # which are necessary to class specifications
   attr_accessor :title
@@ -48,7 +48,9 @@ class Name
 
 #Methods:
   def full_name
-    @first_name + " " + @middle_name + " " + @last_name
+    @first_and_middle_name = @first_name + " " + @middle_name
+
+    @first_and_middle_name + " " + @last_name
   end
 
   def full_name_with_title
