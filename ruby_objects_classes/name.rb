@@ -32,34 +32,53 @@ class Name
    # @title = new_title
  # end
 
-  def first_name
-    "Greg"
+  #Har Coded Attributes:
+  # def first_name
+  #   "Greg"
+  # end
+  #
+  # def middle_name
+  #   ""
+  # end
+  #
+  # def last_name
+  #   "Witt"
+  # end
+# end
+
+#Methods:
+  def full_name
+    @first_name + " " + @middle_name + " " + @last_name
   end
 
-  def middle_name
-    ""
+  def full_name_with_title
+    @title + "" + full_name
   end
 
-  def last_name
-    "Witt"
-  end
-end
-
-#istantiate the class
-name = Name.new("Mr." ,"Greg" ,"" ,"Witt")
+  #istantiate the class
+# name = Name.new("Mr." ,"Greg" ,"" ,"Witt")
 # like in Java it will return the memory address of the class..
-puts "Memory Location for the name:"
-puts name
+# puts "Memory Location for the name:"
+# puts name
 puts "===================="
 #lets display class attributes
-puts name.title + " " +
-     name.first_name + " " +
-     name.middle_name + " " +
-    name.last_name
+# puts name.title + " " +
+#      name.first_name + " " +
+#      name.middle_name + " " +
+#     name.last_name
 
 #testing Accessor Method:
-puts "Old title:"
-puts name.title
-name.title = "Professor."
+# puts "Old title:"
+# puts name.title
+# name.title = "Professor."
 #test
-puts "Title: #{name.title}"
+# puts "Title: #{name.title}"
+#tests Full name method
+name = Name.new("Mr.","Greg"," ","Witt")
+# puts name.title + " " + name.full_name end
+puts name.full_name_with_title
+Matthew = Name.new("Mr.","Matthew", " ","Witt")
+puts Matthew.full_name_with_title
+
+
+end
