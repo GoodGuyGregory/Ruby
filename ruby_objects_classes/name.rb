@@ -7,7 +7,9 @@ class Name
   #Ruby writes the methods and gives the compiler the setters
   # and getters or returns the variables for the class
   attr_reader :title, :first_name, :middle_name, :last_name
-
+  # accessor vs writer vs reader.... Be cautious and utilize those
+  # which are necessary to class specifications
+  attr_accessor :title
   def initialize(title, first_name, middle_name, last_name)
    #creates no argument constructors with initialize method
    # creates instance variables for when the class is initialized
@@ -22,6 +24,13 @@ class Name
  #  def title
  #    @title
  #   end
+
+ # Accessors:
+ # Allows changes to classes
+ # def title=(new_title)
+ #   instance variable titles will be the new title assigned to the accessor method.
+   # @title = new_title
+ # end
 
   def first_name
     "Greg"
@@ -47,3 +56,10 @@ puts name.title + " " +
      name.first_name + " " +
      name.middle_name + " " +
     name.last_name
+
+#testing Accessor Method:
+puts "Old title:"
+puts name.title
+name.title = "Professor."
+#test
+puts "Title: #{name.title}"
