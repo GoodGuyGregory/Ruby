@@ -31,6 +31,20 @@ class BankAccount
   def to_s
     "Name: #{name}, Balance: #{sprintf("%0.2f", balance)}"
   end
+
+  def print_register
+    puts "#{name}'s Bank Account"
+    puts "-" * 40
+
+    puts "Description".ljust(30) + "Amount".rjust(10)
+    puts "-" * 40
+    @transactions.each do |transaction|
+      puts transaction[:description].ljust(30) +
+               sprintf("%0.2f", transaction[:amount]).rjust(10)
+    end
+    puts "-" * 40
+    puts "Balance:".ljust(30) +  sprintf("%0.2f", balance).rjust(10)
+  end
 end
 
 # Testing Class
@@ -45,10 +59,18 @@ bank_account = BankAccount.new("Greg")
 # puts bank_account.inspect
 
 # Test Credit and Debit methods
-bank_account.credit("deal that dope", 500)
+bank_account.credit("Deal that Dope", 500)
 
-bank_account.debit("buy that herb", 250)
+bank_account.debit("Buy that Herb", 250)
+
+bank_account.debit("New Wave Burritos", 10)
 
 # Print Bank account
 # sprintf formats numbers to specifications
 puts bank_account
+
+# Display the Bank Account:
+puts "Register: "
+puts "====================="
+
+bank_account.print_register
