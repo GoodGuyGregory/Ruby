@@ -6,10 +6,11 @@ class Name
   # appear as arguments for the object
   #Ruby writes the methods and gives the compiler the setters
   # and getters or returns the variables for the class
-  attr_reader :title, :first_name, :middle_name, :last_name :first_and_middle_name
+  attr_reader :title, :first_name, :middle_name, :last_name, :first_and_middle_name
   # accessor vs writer vs reader.... Be cautious and utilize those
   # which are necessary to class specifications
   attr_accessor :title
+
   def initialize(title, first_name, middle_name, last_name)
    #creates no argument constructors with initialize method
    # creates instance variables for when the class is initialized
@@ -32,7 +33,7 @@ class Name
    # @title = new_title
  # end
 
-  #Har Coded Attributes:
+  #Hard Coded Attributes:
   # def first_name
   #   "Greg"
   # end
@@ -54,7 +55,7 @@ class Name
   end
 
   def full_name_with_title
-    @title + "" + full_name
+    @title + " " + full_name
   end
 
   #istantiate the class
@@ -79,6 +80,7 @@ puts "===================="
 name = Name.new("Mr.","Greg"," ","Witt")
 # puts name.title + " " + name.full_name end
 puts name.full_name_with_title
+
 Matthew = Name.new("Mr.","Matthew", " ","Witt")
 puts Matthew.full_name_with_title
 

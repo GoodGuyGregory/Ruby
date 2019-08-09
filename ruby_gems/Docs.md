@@ -6,6 +6,7 @@
 
 [Ruby ToolBox ](https://www.ruby-toolbox.com/categories/RSpec_Matchers): Helps Developers find specific gems for unique tasks   
 
+[Money Gem Docs](https://rubydoc.info/gems/money/frames)
 
 ----    
 
@@ -30,4 +31,7 @@ to begin with an installation cd into the directory of your project
     now installing gems in the project directory is as easy as   
     `$ gem install <name>`  
     
+  ### Gems   
   
+  some basic commands `gem contents <gem>` allows you to see the files inside a gem and libraries of that specific gem  
+   
